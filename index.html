@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web-technology lab 7</title>
+    <!-- CSS only -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="warehouse">
+    <div class="cl1">
+        <h4> Миронов Дмитрий Андреевич</h4>
+        <h4>НПИбд 02-21</h4>
+    </div>
+    <div class="sidebar">
+        <button type="button" class="menu_button menu_button_selected" id="menu1" onclick="
+		(document.getElementById('block1').style.display='block');
+		(document.getElementById('block2').style.display='none');
+		(document.getElementById('block3').style.display='none');
+		(document.getElementById('block4').style.display='none')
+		">Home
+        </button>
+        <button type="button" class="menu_button" id="menu2" onclick="
+		(document.getElementById('block1').style.display='none');
+		(document.getElementById('block2').style.display='block');
+		(document.getElementById('block3').style.display='none');
+		(document.getElementById('block4').style.display='none')
+		">Лабораторная 4
+        </button>
+        <button type="button" class="menu_button" id="menu3" onclick="
+		(document.getElementById('block1').style.display='none');
+		(document.getElementById('block2').style.display='none');
+		(document.getElementById('block3').style.display='block');
+		(document.getElementById('block4').style.display='none')
+		">Лабораторная 5
+        </button>
+        <button type="button" class="menu_button" id="menu4" onclick="
+		(document.getElementById('block1').style.display='none');
+		(document.getElementById('block2').style.display='none');
+		(document.getElementById('block3').style.display='none');
+		(document.getElementById('block4').style.display='block')
+		">Лабораторная 6
+        </button>
+    </div>
+    <div class="content">
+        <div class="ex_block" id="block1">
+            <div class="greetings">
+                Это главная страница.</br>
+                Выберите лабораторную работу из списка.
+            </div>
+        </div>
+
+        <div class="ex_block" id="block2" >
+            <script src="./js/scriptlab4.js"></script>
+            <div>
+                <div>
+                    <h4>Задание 13. Переменные</h4>
+                    <h5>Написать скрипт, который генерирует случайное число между min и max.</h5>
+                </div>
+                <div>
+                    <input type="text" id="inp" placeholder="Введите min">
+                    <input type="text" id="inp12" placeholder="Введите max">
+                    <button onclick="ex13lab4()" class="btn btn-primary" type="button">Пуск</button>
+                    <div id="res1_2lab4"></div>
+                    <div></div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h4>Задание 26. Переменные</h4>
+                    <h5>С помощью двух вложенных циклов нарисовать следующую пирамидку:</h5>
+                </div>
+                <div>
+                    <button onclick="ex26lab4()" class="btn btn-primary" type="button">Пуск</button>
+                    <div id="res2lab4"></div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h4>Задание 4. Массивы</h4>
+                    <h5>Дан массив с числами. Проверьте, есть ли в нем два
+                        одинаковых числа подряд. Если есть - выведите 'да', а если
+                        нет – выведите 'нет'.</h5>
+                </div>
+                <div> Введите числа через запятую для формирования массива:</div>
+                <input type="text" id="inp4">
+                <button onclick="ex4lab4()" class="btn btn-primary" type="button">Пуск</button>
+                <div>
+                    <div id="add4-2"></div>
+                    <div id="add4"></div>
+                </div>
+                <div>
+                    <div id="ans4"></div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h4>Задание 6. Массивы</h4>
+                    <h5>Написать скрипт, который сортирует массив чисел сле-
+                        дующим образом: сначала располагаются числа, которые
+                        делятся на 2,потом на 3 и т.д. Сортировку оформить в виде
+                        функции, поместив ее в части head html-файла. Cоздать объ-
+                        ект типа Array и отсортировать его соответствующим обра-
+                        зом, используя функцию этого класса.</h5>
+                </div>
+                <div>
+                    <div>Введите массив чисел, через запятую</div>
+                    <input type="text" id="input2">
+                    <button onclick="ex6lab4()" class="btn btn-primary" type="button">Пуск</button>
+                    <div id="res3"></div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h4>Задание 3. Функции</h4>
+                    <h5>Составить функцию, значением которой было бы
+                        наименьшее натуральное число, которое можно представить
+                        в виде суммы кубов двух натуральных чисел не единствен-
+                        ным способом.</h5>
+                </div>
+                <div>
+                    <div>Введите до какого числа будем искать:</div>
+                    <input type="text" id="r-3">
+                    <button onclick="ex3lab4()" class="btn btn-primary" type="button">Пуск</button>
+                    <div id="res4"></div>
+                    <div id="res5"></div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h4>Задание 7. Функции</h4>
+                    <h5>Числа Мерсенна – числа вида Mn = 2n - 1, где n – нату-
+                        ральное число. Составить функцию, которая находит первые
+                        n чисел Мерсенна.</h5>
+                </div>
+                <div>
+                    <div>Сколько чисел Мерсенна посчитаем?</div>
+                    <input type="text" id="r-7">
+                    <button onclick="ex7lab4()" class="btn btn-primary" type="button">Пуск</button>
+                    <div id="res6"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ex_block" id="block3" >
+            <script src="./js/scriptlab5.js"></script>
+            <div>
+                <h4>Задание 5. Строки</h4>
+                <h5>Дана строка 'aaa bbb ccc'. Вырезать из нее слово 'bbb'
+                    тремя разными способами (использовать substr, substring,
+                    slice).</h5>
+            </div>
+            <div>
+                <h4>С использованием метода substr</h4>
+                <button onclick="ex5_1lab5()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res5_1"></div>
+            </div>
+            <div>
+                <h4>С использованием метода substring</h4>
+                <button onclick="ex5_2lab5()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res5_2">Оно работает</div>
+            </div>
+            <div>
+                <h4>С использованием метода substring</h4>
+                <button onclick="ex5_3lab5()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res5_3"></div>
+            </div>
+            <div>
+                <h4>Задание 11. Строки</h4>
+                <h5>Преобразуйте первую букву строки 'я изучаю javascript' в верхний регистр.</h5>
+            </div>
+            <div>
+                <button onclick="ex11lab5()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res11"></div>
+            </div>
+            <div>
+                <h4>Задание 9. RegExp</h4>
+                <h5>Дана строка 'a.a aba aea'.
+                    Написать регулярное выражение, которое найдет строку a.a, не захватив остальные.</h5>
+            </div>
+            <div>
+                <button onclick="ex9lab5()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res9"></div>
+            </div>
+            <div>
+                <h4>Задание 24. RegExp</h4>
+                <h5>Дана строка 'aba aea aca aza axa a-a a#a'.
+                    Написать регулярное выражение, которое найдет строки следующего
+                    вида: по краям стоят буквы 'a', а между ними – не 'e' и не 'x'.</h5>
+            </div>
+            <div>
+                <button onclick="ex24lab5()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res24"></div>
+            </div>
+        </div>
+        <div class="ex_block" id="block4">
+            <script src="./js/script_lab6.js"></script>
+            <div>
+                <h4>Задание 4. Объекты</h4>
+                <h5>Создать объект футбольная команда с ключами Николай, Андрей, Петр и т.д. с элементами 'вратарь',
+                    'нападающий', 'правый защитник' и т.д. С помощью цикла for-in вывестие на экран строки такого
+                    формата:
+                    'Николай – вратарь'. и т.д. Предусмотреть случай с одинаковыми именами.</h5>
+            </div>
+            <div>
+                <input type="text" placeholder="Введите имена игроков" class="inp" id="key">
+                <br>
+                <input type="text" placeholder="Введите позиции этих играков на поле" class="inp" id="value">
+                <br>
+                <button onclick="ex4_object()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res4_lab6"></div>
+            </div>
+            <div>
+                <h4>Задание 7. Объекты</h4>
+                <h5>Создать объект неделя, ключами у которого являются
+                    названия дней недели, а элементами признак того, является
+                    ли день будним или выходным. С помощью цикла for-in вывести все дни недели, а выходные дни вывести
+                    жирным
+                    шрифтом.</h5>
+
+            </div>
+            <div>
+                <div>Введите необходимые данные через запятую:</div>
+                <input type="text" placeholder="Введите название дней недели" class="inp" id="k">
+                <br>
+                <input type="text" placeholder="Введите является этот день будним или выходным" class="inp" id="val">
+                <br>
+                <button onclick="ex7_object()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+                <div id="res7_lab6"></div>
+            </div>
+            <div>
+                <h4>Задание 4.</h4>
+                <h5>Создать кнопку с надписью «press». По щелчку на
+                    кнопке меняется надпись на ней и цвет надписи.</h5>
+            </div>
+            <div>
+                <button onclick="ex4_1_event()" type="button" class="btn btn-success" id="myButton" value="press">press
+                </button>
+            </div>
+            <div>
+                <h4>Задание 10.</h4>
+                <h5>Создать два текстовых поля, озаглавив их соответственно “отсюда” и “сюда”. Получить данные введенные
+                    в
+                    первом текстовом поле и вставить их во второе.</h5>
+            </div>
+            <div>
+                <input id="txt1" placeholder="Введите текст">
+                <input id="txt2">
+                <button onclick="ex10_event()" type="button" class="btn btn-success">Заработай пожалуйста</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
